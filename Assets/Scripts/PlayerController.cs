@@ -14,15 +14,16 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        transform.position = initialPos;
+        transform.position = initialPos; //indicamos la posición inicial
     }
 
     void Update()
     {
+        //Hacemos que el personaje se mueva en x y a una velocidad constante. Así como la rotación arriba y abajo
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
             verticalInput = Input.GetAxis("Vertical");
         transform.Rotate(Vector3.right * turnspeed * Time.deltaTime * -verticalInput);
-       
+       //Indicamos que si pasa una cantidad salga un mensaje de the end
         if (transform.position.z >= zMax)
         {
             Debug.Log("GAME OVER, THE END");

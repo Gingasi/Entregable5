@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-
+    //Controlador para que la cámara siga al jugador
     public GameObject player;
     private Vector3 offset = new Vector3(9, 0, 0);
 
